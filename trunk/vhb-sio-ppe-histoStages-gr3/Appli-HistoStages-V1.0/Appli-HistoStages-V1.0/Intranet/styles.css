@@ -1,0 +1,243 @@
+/* CSS issu du site Web www.aidejavascript.com */
+/* propriétés de style à appliquer à une sous-liste non numérotée
+    ul#menulist li ul : balise ul dans une balise li elle-même située à l'intérieur d'une
+    balise ul d'identifiant menulist 
+*/
+ul#menulist li ul { 
+	display:none;  /* les sous-listes ne sont pas affichées par défaut */
+}
+
+/* propriétés de style à appliquer à une sous-liste non numérotée enfant d'un
+    élément survolé par la souris
+    ul#menulist li:hover > ul : balise ul enfant d'une balise li survolée par la souris
+    cette balise li elle-même située à l'intérieur de la balise ul d'identifiant menulist 
+*/
+ul#menulist li:hover>ul { 
+	display:block;         /* sous liste à afficher en mode bloc */
+}
+
+/* propriétés de style à appliquer à la balise ul d'identifiant menulist
+   et à ses sous-listes
+*/
+ul#menulist,
+ul#menulist ul {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    width:118px;
+    _width:120px;
+    font-size: 10pt;
+}
+
+/* propriétés de style à appliquer aux sous-listes de la balise ul d'identifiant menulist
+*/
+ul#menulist ul {
+    position:absolute;
+    top:-1px;
+    left:115px;
+    width:168px;
+    _width:170px;
+    background: #f0f0f0;
+    border:1px solid #aaa;
+}
+
+/* propriétés de style à appliquer aux éléments de la balise ul d'identifiant menulist
+*/
+ul#menulist li {
+    position:relative;
+    margin:0px;
+    padding:0px;
+    _display:inline;
+}
+
+/* apparences des liens dans listes et sous-listes non numérotées */
+ul#menulist a {
+    display:block;
+    width:100%;
+    color:#000;
+}
+ul#menulist ul a, ul#menulist ul a:visited {
+    color:#000000;
+}
+ul#menulist a:hover {
+    background: gray;
+    color: white;
+}
+
+body{
+  background-color:#FAFAE6;
+  margin:0px;
+  padding : 10px;
+  font-family:"Verdana",sans-serif;
+  font-size:1em;
+}
+#entete{
+	background-color: #FFF0E6;
+	border: solid 2px green;
+	height: 105px;
+	padding: 2px;
+	border-collapse: separate;
+}
+#pied{
+  clear : both;
+	border : solid 2px green;
+	margin-left : 200px;
+	margin-top : 10px;
+	padding:5px;
+/*	height: 50px;*/
+	padding: 2px;
+	border-collapse: separate;
+}
+#menugauche {
+	border: dashed 2px #yellow;
+	margin-top : 10px;
+	padding: 10px;
+	background-color: #FFFFF0;
+	color: #000;
+	float: left;
+	width: 180px;
+	border : solid 2px red;
+}
+#contenu{
+  font-size:0.7em;
+	border: none;
+	padding: 10px;
+/*	background-color: #FAF0E6;*/
+	background-color: #FFF0E6;
+	margin-top : 10px;
+	margin-left: 210px;
+	min-height:24.5em;
+	height:24.5em;
+	height : auto;
+}
+
+#logoValidW3c {
+  display: inline;
+}
+#libValidW3c{
+  display : inline;
+}
+.ligneTabQuad a:link		{text-decoration:none ; color:#333333 ;} 
+.ligneTabQuad a:visited	{text-decoration:none ; color:#000066 ;}
+.ligneTabQuad a:hover		{text-decoration:none ; color:#FD4040 ;}
+
+
+/* Style du titre du tableau */
+.titreTabQuad {
+  font-size : 12px; 
+  font-family : Verdana, arial, helvetica, sans-serif; 
+  color : #eeeeee; 
+  text-align : center; 
+  font-weight : bold; 
+  background-color : #666666; 
+}
+
+/* Style des en-têtes du tableau */
+.enteteTabQuad {
+  font-size : 12px; 
+  font-family : Verdana, arial, helvetica, sans-serif;  
+  font-weight : bold ;
+  color : #333333; 
+  background-color : #a7ada7; 
+}
+
+/* Style des cellules */
+.ligneTabQuad { font-size: 12px; font-family: Verdana, arial, helvetica, sans-serif; color: 
+               #333333; background-color: #FFCC66 }
+
+/* Style des en-têtes d'un tableau non quadrillé*/
+.enteteTabNonQuad {
+  font-size : 12px; 
+  font-family : Verdana, arial, helvetica, sans-serif;  
+  font-weight : bold ;
+  color : #333333; 
+  background-color : #a7ada7; 
+}
+
+/* Style des cellules */
+.ligneTabNonQuad { font-size: 10px; font-family: Verdana, arial, helvetica, sans-serif; color: 
+               #333333; background-color: #FFCC66 ; vertical-align:top;text-align:left}
+
+/* Style des formulaires */
+#corpsForm {
+  border : solid 2px #000;
+  width : 90%;
+}
+#piedForm {
+  border : solid 2px #000;
+  text-align:right ;
+  width : 90%;
+/*  padding-left:23%;*/
+}
+#corpsForm label{
+  float : left;
+  text-align:right;
+  width:25%;
+	margin: 0;
+	padding: 0 .5em 0 0;
+	line-height: 1.8;	
+}
+input, button, textarea, select{
+  font-family:"Trebuchet MS", sans-serif;
+  font-size : 1em;
+}
+button{
+  width : 60px;
+  height : 30px;
+  text-align:center;
+  vertical-align:center;
+}
+input:hover, textarea:hover, select:hover{
+  background-color : #FAFAE6;
+  cursor : pointer;
+}
+p.liensFinPage {
+  width:90%; 
+  text-align:center;
+}
+#contenu h1 {
+  font-size : 1.8em;
+  margin-top : 0;
+}
+#contenu h2 {
+  font-size : 1.5em;
+  margin-top : 0;
+}
+#contenu ul {}
+
+#contenu li {}
+/* Style du titre du tableau */
+th {
+  font-size : 1em; 
+  font-family : Verdana, arial, helvetica, sans-serif; 
+  color : #eeeeee; 
+  text-align : center; 
+  font-weight : bold; 
+  background-color : #666666; 
+  border : solid black 0.2em;
+}
+
+.domaine {
+   font-weight : bold;
+   font-size : 1.2em;
+   color : #333333; 
+   background-color : #a7ada7; 
+}
+
+.commun {
+    font-weight : bold;
+    font-style : italic;
+}
+
+tr { font-size: 1em; font-family: Verdana, arial, helvetica, sans-serif; 
+     color:#333333; background-color: #FFCC66;
+}
+
+th, td { padding : 0.3em;}
+
+th.nomenclature { 
+    width:2em
+}
+th.libelle {
+    width : 85em
+}
