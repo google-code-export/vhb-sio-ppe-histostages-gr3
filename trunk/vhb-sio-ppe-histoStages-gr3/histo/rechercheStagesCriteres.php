@@ -47,7 +47,24 @@ if (!selectBase($connexion))
   </p>
   <p> 
     <label for="ville" accesskey="v">Ville : </label>
-    <input id="ville" name="ville" maxlength="50" value="" />
+	<input id="ville" name="ville" maxlength="50" value="" /> 
+    <select name="ville" id="ville" size="1"> 
+    <option value="0" selected="selected">Indifférent</option>
+<?php
+    $req = obtenirReqVille();
+    $rsVille = mysql_query ($req, $connexion);
+    $lgVille = mysql_fetch_assoc($rsVille);
+    
+    while ( $lgVille != false ) {
+        $ville = $lgVille['ville'];
+        echo '<option value="' . $ville . '">' . $ville . '</option>
+        ';
+        
+        $lgVille = mysql_fetch_assoc($rsVille); 
+    
+    }
+    mysql_free_result($rsVille);
+?>     
   </p>
   <p> 
     <label for="anneeForm" accesskey="f">Année de formation : </label>
