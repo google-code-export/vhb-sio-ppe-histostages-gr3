@@ -63,7 +63,7 @@ $anneeStage=htmlspecialchars($lg['anneeStage']);
 $libelle=htmlspecialchars($lg['libelle']);
 $motsCles=htmlspecialchars($lg['motsCles']);
 
-
+// amelioration 10:Consultation stages et organisations - Rendre cliquables les adresses mail (corentin barre)
 echo '
 <table width="90%" cellspacing="0" cellpadding="0" class="tabNonQuadrille">
    
@@ -85,7 +85,10 @@ echo '
    </tr>
    <tr class="ligneTabNonQuad">
       <td> Email:</td>
-      <td>'.$email.'</td>
+      
+ 
+ 
+      <td><a href="mailto:'.$email.'">'.$email.'</a></td>
    </tr> 
    <tr class="ligneTabNonQuad">
       <td> Site Web: </td>
