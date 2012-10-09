@@ -74,6 +74,12 @@ function obtenirDetailOrganisation($connexion, $num)
    return mysql_fetch_array($rs);
 }
 
+function obtenirReqVille()
+{
+	$req="SELECT distinct ville FROM organisation";
+	return $req;
+}
+
 function obtenirReqStages()
 {
    $req = "select s.id as idStage, o.nom as nomOrga, e.nom as nomEtud, e.prenom as prenomEtud, concat( year( p.dateFin ) , '-', 'IG', p.numAnneeForm ) AS anneeStage 
