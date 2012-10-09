@@ -49,8 +49,9 @@ if (!selectBase($connexion))
     <label for="ville" accesskey="v">Ville : </label>
 	<input id="ville" name="ville" maxlength="50" value="" /> 
     <select name="ville" id="ville" size="1"> 
+<!-- AmÈlioration du formulaire de recherche (Kadile Dany) -->
     <option value="0" selected="selected">Indiff√©rent</option>
-<?php
+    <?php
     $req = obtenirReqVille();
     $rsVille = mysql_query ($req, $connexion);
     $lgVille = mysql_fetch_assoc($rsVille);
@@ -59,7 +60,6 @@ if (!selectBase($connexion))
         $ville = $lgVille['ville'];
         echo '<option value="' . $ville . '">' . $ville . '</option>
         ';
-        
         $lgVille = mysql_fetch_assoc($rsVille); 
     
     }
