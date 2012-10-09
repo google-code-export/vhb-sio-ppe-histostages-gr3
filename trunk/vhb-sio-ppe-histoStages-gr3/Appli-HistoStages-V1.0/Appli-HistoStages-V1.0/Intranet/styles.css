@@ -3,66 +3,59 @@
     ul#menulist li ul : balise ul dans une balise li elle-même située à l'intérieur d'une
     balise ul d'identifiant menulist 
 */
-ul#menulist li ul { 
-	display:none;  /* les sous-listes ne sont pas affichées par défaut */
-}
+
 
 /* propriétés de style à appliquer à une sous-liste non numérotée enfant d'un
     élément survolé par la souris
     ul#menulist li:hover > ul : balise ul enfant d'une balise li survolée par la souris
     cette balise li elle-même située à l'intérieur de la balise ul d'identifiant menulist 
 */
-ul#menulist li:hover>ul { 
-	display:block;         /* sous liste à afficher en mode bloc */
-}
+
 
 /* propriétés de style à appliquer à la balise ul d'identifiant menulist
    et à ses sous-listes
 */
-ul#menulist,
+
+
+
+*/ amelioration de Affichage permanent des choix de second niveau du sommaire (barré corentin)/*
+
+ul#menulist{    
+	list-style:none;
+    margin:2px;
+    padding:2px;
+    margin-left:8px;
+    width:150px;
+    _width:150px;
+    font-size: 12pt;
+    list-style-type:square;
+}
+
 ul#menulist ul {
     list-style:none;
-    margin:0px;
-    padding:0px;
+    margin:2px;
+    padding:2px;
     width:118px;
     _width:120px;
-    font-size: 10pt;
+    font-size: 8pt;
+    
 }
 
-/* propriétés de style à appliquer aux sous-listes de la balise ul d'identifiant menulist
-*/
-ul#menulist ul {
-    position:absolute;
-    top:-1px;
-    left:115px;
-    width:168px;
-    _width:170px;
-    background: #f0f0f0;
-    border:1px solid #aaa;
-}
 
-/* propriétés de style à appliquer aux éléments de la balise ul d'identifiant menulist
-*/
-ul#menulist li {
-    position:relative;
-    margin:0px;
-    padding:0px;
-    _display:inline;
-}
+
+
 
 /* apparences des liens dans listes et sous-listes non numérotées */
 ul#menulist a {
     display:block;
     width:100%;
     color:#000;
+    
 }
 ul#menulist ul a, ul#menulist ul a:visited {
     color:#000000;
 }
-ul#menulist a:hover {
-    background: gray;
-    color: white;
-}
+
 
 body{
   background-color:#FAFAE6;
