@@ -38,8 +38,9 @@ $tabConditions = array(); // initialisation tableau vide
 if ( $dept != '' && $dept !='0' ) {
   $tabConditions [] = "o.numeroDept=" . intval($dept);
 }
-if ( $ville != '' ) {
-  $tabConditions [] = "o.ville like '%" . filtreChaineBD($ville) . "%'";
+/* Amélioration du formulaire de recherche*/
+if ( $ville != '' && $dept !='0'  ) {
+  $tabConditions [] = "o.ville=" . intval($ville) ;
 }
 if ( $anneeForm != ''  && $anneeForm !='0' ) {
   $tabConditions [] = 'p.numAnneeForm=' . intval($anneeForm);
