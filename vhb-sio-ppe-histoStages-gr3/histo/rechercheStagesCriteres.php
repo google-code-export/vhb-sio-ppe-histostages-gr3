@@ -46,9 +46,8 @@ if (!selectBase($connexion))
     </select>
   </p>
   <p> 
-    <label for="ville" accesskey="v">Ville : </label>
-	<input id="ville" name="ville" maxlength="50" value="" /> 
-    <select name="ville" id="ville" size="1"> 
+    <label for="ville" accesskey="v">Ville : </label> 
+    <select name="ville" size="1"> 
 <!-- AmÈlioration du formulaire de recherche (Kadile Dany) -->
     <option value="0" selected="selected">Indiff√©rent</option>
     <?php
