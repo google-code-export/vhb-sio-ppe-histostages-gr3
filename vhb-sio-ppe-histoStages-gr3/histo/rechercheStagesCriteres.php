@@ -70,7 +70,7 @@ if (!selectBase($connexion))
 		<p>
 			<label for="anneeForm" accesskey="f">Année de formation : </label> <select
 				name="anneeForm" size="1">
-				<option value="0" selected="selected">Indifférent</option>
+				<option value="0" selected="selected" >Indifférent</option>
 				<option value="1">Première année</option>
 				<option value="2">Deuxième année</option>
 			</select>
