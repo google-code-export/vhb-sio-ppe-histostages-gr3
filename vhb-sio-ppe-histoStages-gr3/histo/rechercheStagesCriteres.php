@@ -49,7 +49,7 @@ if (!selectBase($connexion))
 		<p>
 			<label for="ville" accesskey="v">Ville : </label> <select
 				name="ville" size="1">
-				<!-- Amélioration du formulaire de recherche (Kadile Dany) -->
+				<!-- AmÃ¨lioration du formulaire de recherche (Kadile Dany) -->
 				<option value="0" selected="selected">IndiffÃ©rent</option>
 				<?php
 				$req = obtenirReqVille();
@@ -68,11 +68,11 @@ if (!selectBase($connexion))
 			</select>
 		</p>
 		<p>
-			<label for="anneeForm" accesskey="f">Année de formation : </label> <select
+			<label for="anneeForm" accesskey="f">AnnÃ¨e de formation : </label> <select
 				name="anneeForm" size="1">
-				<option value="0" selected="selected" >Indifférent</option>
-				<option value="1">Première année</option>
-				<option value="2">Deuxième année</option>
+				<option value="0" selected="selected" >IndiffÃ©rent</option>
+				<option value="1">PremiÃ¨re annÃ¨e</option>
+				<option value="2">DeuxiÃ¨me annÃ¨e</option>
 			</select>
 		</p>
 		<p>
