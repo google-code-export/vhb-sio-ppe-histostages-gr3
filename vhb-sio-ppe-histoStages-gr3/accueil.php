@@ -56,13 +56,13 @@
          </li>
        	 <li class="smenu"><a href="?page=adressesSites" accesskey="L">Liens sites stages</a>
        	 </li>
-      
+        
   </ul>
- </div>
+ </div> 
 		  
 	
 	 <div id="contenu">
-  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('./histo/'.$page.'.php');} ?>
+  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('./Appli-HistoStages-V1.0/'.$page.'.php');} ?>
 	 </div>
 	
   <!-- Division pour le pied de page -->
