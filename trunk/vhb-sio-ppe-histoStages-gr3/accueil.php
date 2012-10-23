@@ -56,6 +56,13 @@
          </li>
        	 <li class="smenu"><a href="?page=adressesSites" accesskey="L">Liens sites stages</a>
        	 </li>
+       	 
+       	 
+     
+       	 <li class="smenu"><a href="./accueiladmin.php" accesskey="L">Administration</a>
+       	 </li>
+       	 
+       	 
         
   </ul>
  </div> 
