@@ -79,7 +79,7 @@ else
 	</tr>
 	</table>
 	<p class="liensFinPage">
-	<a href="AjoutContact.php"> Ajouter un contact </a> </br>
+	<a href="ajouterContact.php"> Ajouter un contact </a> </br>
 	<a href="accueil.php?page=listeOrganisations">Retour</a>
 	</p>';
 }
