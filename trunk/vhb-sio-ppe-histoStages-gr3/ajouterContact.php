@@ -35,8 +35,7 @@
 					<li><a href="?page=activitesP5"
 						title="Liste des activitÃ©s du processus P5">ActivitÃ©s P5</a></li>
 				</ul></li>
-			<li class="smenu"><a href="#" accesskey="h">Historique
-					stages</a>
+			<li class="smenu"><a href="#" accesskey="h">Historique stages</a>
 				<ul>
 					<li><a href="?page=listeOrganisations"
 						title="Liste des organisations ayant accueilli un stagiaire">Liste
@@ -52,10 +51,14 @@
 
 
 	<div id="contenu">
-		<?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('./Appli-HistoStages-V1.0/'.$page.'.php');} ?>
+		<?php if ( isset($_GET["page"]) ) { 
+			$page = $_GET["page"]; include('./Appli-HistoStages-V1.0/'.$page.'.php');
+} ?>
 		<form action="">
 			<b>Ajouter un contact d'une organisation</b>
-			<br /><br/><br/>
+			<br />
+			<br />
+			<br />
 
 			<label for="civilite" accesskey="c">Civilité*: </label>
 			<select name="civilite" id="civilite" size="1">
@@ -65,31 +68,40 @@
 			</select>
 			<p>
 				<label for="nom" accesskey="n"> Nom* : </label> <input type="text"
-					id="nom" name="nom" maxlength="50" value="" style="height: 21px; required="required" />
+					id="nom" name="nom" maxlength="50" value="" style="height: 21px;" required" />
 			</p>
 			<p>
-				<label for="prenom" accesskey="p"> Prénom* :</label> <input type="text"
-				id="nom" name="nom" maxlength="50" value="" style="height: 21px; required="required" />
-			</p>
-			
-			<p>
-				<label for="fonction" accesskey="f"> Fonction :</label> <input type="text"
-				id="fonction" name="fonction" maxlength="50" value="" style="height: 21px; required="required" />
-			</p>
-			
-			<p>
-				<label for="telephone" accesskey="t"> Telephone :</label> <input type="text"
-				id="telephone" name="telephone" maxlength="50" value="" style="height: 21px; required="required"/>
-			</p>
-			
-			<p>
-				<label for="email" accesskey="e"> Email :</label> <input type="text"
-				id="email" name="email" maxlength="50" value="" style="height: 21px; required="required" />
+				<label for="prenom" accesskey="p"> Prénom* :</label> <input
+					type="text" id="nom" name="nom" maxlength="50" value=""
+					style="height: 21px;" required" />
 			</p>
 
-			<input type="submit" name="ok" value="Ajouter" /> <input type="submit" name ="retour" value="Retour"/></br></br></br>
+			<p>
+				<label for="fonction" accesskey="f"> Fonction :</label> <input
+					type="text" id="fonction" name="fonction" maxlength="50" value=""
+					style="height: 21px;" required" />
+			</p>
+
+			<p>
+				<label for="telephone" accesskey="t"> Telephone :</label> <input
+					type="text" id="telephone" name="telephone" maxlength="50" value=""
+					style="height: 21px;" required"/>
+			</p>
+
+			<p>
+				<label for="email" accesskey="e"> Email :</label> <input type="text"
+					id="email" name="email" maxlength="50" value=""
+					style="height: 21px;" required" />
+			</p>
+
+			<a href="msgConfirmation.php"><input type="button" value="Ajouter">
 			
-			* : champs obligatoires
+			</a>
+
+			<input type="submit" name="retour" value="Retour" />
+			</br>
+			</br>
+			</br> * : champs obligatoires
 
 		</form>
 
@@ -100,7 +112,7 @@
 		<p id="logoValidW3c">
 			<a href="http://validator.w3.org/check?uri=referer"><img
 				src="http://www.w3.org/Icons/valid-xhtml10"
-				alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+				alt="Valid XHTML 1.0 Strict" height="31" width="88" /> </a>
 		</p>
 		<p id="libValidW3c">Cette page est conforme aux standards du Web</p>
 	</div>
