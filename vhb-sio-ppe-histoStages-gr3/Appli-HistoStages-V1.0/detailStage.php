@@ -122,6 +122,7 @@ echo '
    </tr>
 </table>
 <p class="liensFinPage">
+		<a href="AjoutContact.php"> Ajouter un contact </a> </br>
       <a href="accueil.php?page=rechercheStagesCriteres">Retour</a>
 </p>';
 }
