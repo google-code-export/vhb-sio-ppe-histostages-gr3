@@ -8,6 +8,10 @@
 
   </head>
   <body>
+  
+ 
+
+
     <div id="entete">
 <!--      <img src="../img/logo.jpg" class="logo" alt="logo" /> -->
       <h1>Site intranet de la section STS IG-SIO</h1>
@@ -105,6 +109,11 @@
 		
 		
 <?php
+
+include("../Appli-HistoStages-V1.0/_gestionBase.inc.php");
+include("../Appli-HistoStages-V1.0/_controlesEtGestionErreurs.inc.php");
+
+
 // Programme principal
 // Teste le rapatriement du fichier
 if ( isset($_FILES['Upload']) ) {
@@ -135,6 +144,36 @@ else {
     
     
     //execution du fichier pour ajout dans sql
+    
+    
+    
+    //Le chemin d'acces a ton fichier sur le serveur
+    $fichier = fopen("depot/".$_FILES['Upload']['name'], "r");
+    
+    //tant qu'on est pas a la fin du fichier :
+    while (!feof($fichier))
+    {
+    	// On recupere toute la ligne
+    	$uneLigne = addslashes(fgets($fichier));
+    	//On met dans un tableau les differentes valeurs trouvés (ici séparées par un ';')
+    	$tableauValeurs = explode(';', $uneLigne);
+    	// On crée la requete pour inserer les donner (ici il y a 4 champs donc de [0] a [4])
+    	$sql="INSERT etudiant INTO histostages VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."', '".$tableauValeurs[3]."', '".$tableauValeurs[4]."')";
+    
+    	$req=mysql_query($sql)or die (mysql_error());
+    	// la ligne est finie donc on passe a la ligne suivante (boucle)
+    }
+    //vérification et envoi d'une réponse à l'utilisateur
+    if ($req)
+    {
+    	echo "<h2>Ajout dans la base de données effectué avec succès</h2>";
+    }
+    else
+    {
+    	echo "Echec dans l'ajout dans la base de données";
+    }
+    
+    
     
     
     
