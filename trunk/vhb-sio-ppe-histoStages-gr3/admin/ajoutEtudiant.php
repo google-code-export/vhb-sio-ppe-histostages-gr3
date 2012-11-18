@@ -129,15 +129,20 @@ else {
     	 echo '<p>dichier deplacé</p>';
     } else
     {
-    	echo '<p>demplacement impossible</p>';'
+    	echo '<p>deplacement impossible</p>';
     }
     
     
-        
+    
+    //execution du fichier pour ajout dans sql
     
     
     
-  }
+    //supression du fichier apres ajout SQL
+    
+    //unlink($_FILES['Upload']['name']);
+    
+ } 
 }
 ?>
 
