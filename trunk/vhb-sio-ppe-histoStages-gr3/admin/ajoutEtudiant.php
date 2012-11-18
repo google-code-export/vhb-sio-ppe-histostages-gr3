@@ -83,24 +83,72 @@
 	
 	 <div id="contenu">
   
-  <form id="ajoutEtud"
+  
 
 	<div id="corpsForm">
 		<p>
 			
-			<fieldset class="invisiblefieldset">
-			<p>fichier contenant la liste des Ã©tudiants</p>
-				<input type="hidden" value="uploadfile" name="action">
-				<input type="file" alt="newfile" name="newfile" size="50">
-				<br>
-				<input type="submit" value="DÃ©poser ce fichier" name="save">
-			</fieldset>
+		<fieldset class="invisiblefieldset">
+			
+			<form enctype="multipart/form-data" method="post">
+				<p>
+				<input type="file" name="Upload" id="Upload" /></br>
+				<input type="submit" id="valider" value="Valider" />
+				</p>
+			</form>
+			
+
+
+
+
+		</fieldset>
+		
+		
+<?php
+// Programme principal
+// Teste le rapatriement du fichier
+if ( isset($_FILES['Upload']) ) {
+  if ( $_FILES['Upload']['error'] != UPLOAD_ERR_OK ) {
+    echo '<p>échec du depot</p>';
+}
+else {
+    echo '<p>dépot réussi</p>
+    	<ul>
+			<li>Fichier local sur le serveur : ' . $_FILES['Upload']['tmp_name'] . '</li>
+            <li>Nom : ' . $_FILES['Upload']['name'] . '</li>
+            <li>Taille : ' . $_FILES['Upload']['size'] . '</li>
+            <li>Type : ' . $_FILES['Upload']['type'] . '</li>
+          </ul>
+          ' ;
+    
+    
+    // Déplacer le fichier chargé
+    $repTemporaire = 'depot/' . basename($_FILES['Upload']['name']);
+    if (move_uploaded_file($_FILES['Upload']['tmp_name'], $repTemporaire))
+    {
+    	 echo '<p>dichier deplacé</p>';
+    } else
+    {
+    	echo '<p>demplacement impossible</p>';'
+    }
+    
+    
+        
+    
+    
+    
+  }
+}
+?>
+
 		</p>
+
+
 		
 	</div>
 
 
-</form>
+
   
   
 	 </div>
