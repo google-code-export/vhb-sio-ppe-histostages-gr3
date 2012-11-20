@@ -22,10 +22,10 @@
        	 <li class="smenu"><a href="#" accesskey="c">Comp√©tences IG</a>
           <ul>
             <li>
-              <a href="../?page=competencesSavoirsDA" title="Liste des comp√©tences DA">Comp√©tences DA</a>
+              <a href="../?page=competencesSavoirsDA" title="Liste des comp√É¬©tences DA">Comp√©tences DA</a>
             </li>
             <li>
-              <a href="../?page=competencesSavoirsAR" title="Liste des comp√©tences AR">Comp√©tences AR</a>
+              <a href="../?page=competencesSavoirsAR" title="Liste des comp√É¬©tences AR">Comp√©tences AR</a>
             </li>
           </ul> 
          </li>
@@ -54,7 +54,7 @@
               <a href="../?page=listeOrganisations" title="Liste des organisations ayant accueilli un stagiaire">Liste entreprises</a>
             </li>
             <li>
-              <a href="../?page=rechercheStagesCriteres" title="Rechercher un stage sur crit√®res">Recherche stages</a>
+              <a href="../?page=rechercheStagesCriteres" title="Rechercher un stage sur crit√É¬®res">Recherche stages</a>
             </li>
           </ul> 
          </li>
@@ -65,9 +65,9 @@
        	
        	<li class="smenu"><a href="#" accesskey="c">Administration</a>
           <ul>
-             <li class="smenu"><a href="./admin/ajoutEtudiant.php" title="Ajout edutiant">Ajout etudiant</a>
+             <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout √©dutiant">Ajout etudiant</a>
        	 </li>
-            <li class="smenu"><a href="../?page=ajoutPeriode" title="Ajout periode">Ajout periode</a>
+            <li class="smenu"><a href="../?page=ajoutPeriode" title="Ajout p√©riode">Ajout periode</a>
             </li>
             <li class="smenu"><a href="../?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>
@@ -118,24 +118,20 @@ include("../Appli-HistoStages-V1.0/_controlesEtGestionErreurs.inc.php");
 // Teste le rapatriement du fichier
 if ( isset($_FILES['Upload']) ) {
   if ( $_FILES['Upload']['error'] != UPLOAD_ERR_OK ) {
-    echo '<p>Èchec du depot</p>';
+    echo '<p>√©chec du depot</p>';
 }
 else {
-    echo '<p>dÈpot rÈussi</p>
-    	<ul>
-			<li>Fichier local sur le serveur : ' . $_FILES['Upload']['tmp_name'] . '</li>
-            <li>Nom : ' . $_FILES['Upload']['name'] . '</li>
-            <li>Taille : ' . $_FILES['Upload']['size'] . '</li>
-            <li>Type : ' . $_FILES['Upload']['type'] . '</li>
-          </ul>
-          ' ;
+    echo '<p>d√©pot r√©ussi</p>' ;
     
     
-    // DÈplacer le fichier chargÈ
+    // D√©placer le fichier charg√©
     $repTemporaire = 'depot/' . basename($_FILES['Upload']['name']);
+    
+    
+
     if (move_uploaded_file($_FILES['Upload']['tmp_name'], $repTemporaire))
     {
-    	 echo '<p>dichier deplacÈ</p>';
+    	 
     } else
     {
     	echo '<p>deplacement impossible</p>';
@@ -155,22 +151,33 @@ else {
     {
     	// On recupere toute la ligne
     	$uneLigne = addslashes(fgets($fichier));
-    	//On met dans un tableau les differentes valeurs trouvÈs (ici sÈparÈes par un ';')
+    	//On met dans un tableau les differentes valeurs trouv√©s (ici s√©par√©es par un ';')
     	$tableauValeurs = explode(';', $uneLigne);
-    	// On crÈe la requete pour inserer les donner (ici il y a 4 champs donc de [0] a [4])
-    	$sql="INSERT etudiant INTO histostages VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."', '".$tableauValeurs[3]."', '".$tableauValeurs[4]."')";
+    	
+    	
+    	$connexion = mysql_connect('localhost', 'root', '') OR die('Erreur de connexion');
+    	mysql_select_db('HistoStages') OR die('Erreur de s√©lection de la base');
+    	
+    	
+    	$req = "SELECT max( numero ) as maxnum FROM etudiant ;";
+    	$nbEtudQuery=mysql_query($req, $connexion);
+    	$lg = mysql_fetch_array($nbEtudQuery);
+    	$nbEtud = $lg['maxnum'] + 1;
+    	
+    	
+    	$sql="INSERT INTO etudiant VALUES ('".$nbEtud."', '".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."')";
     
     	$req=mysql_query($sql)or die (mysql_error());
     	// la ligne est finie donc on passe a la ligne suivante (boucle)
     }
-    //vÈrification et envoi d'une rÈponse ‡ l'utilisateur
+    //v√©rification et envoi d'une r√©ponse √† l'utilisateur
     if ($req)
     {
-    	echo "<h2>Ajout dans la base de donnÈes effectuÈ avec succËs</h2>";
+    	echo "<h2>Ajout dans la base de donn√©es effectu√© avec succ√®s</h2>";
     }
     else
     {
-    	echo "Echec dans l'ajout dans la base de donnÈes";
+    	echo "Echec dans l'ajout dans la base de donn√©es";
     }
     
     
@@ -179,7 +186,13 @@ else {
     
     //supression du fichier apres ajout SQL
     
-    //unlink($_FILES['Upload']['name']);
+    $nomFic = ($_FILES['Upload']['name']) ;
+    
+ 
+	fclose($fichier);
+
+    unlink('./depot/'.$nomFic);
+    
     
  } 
 }
