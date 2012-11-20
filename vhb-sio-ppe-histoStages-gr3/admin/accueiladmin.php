@@ -4,7 +4,7 @@
   <head>
     <title>Site intranet de la section STS IG-SIO</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
 
   </head>
   <body>
@@ -12,35 +12,40 @@
 <!--      <img src="img/logo.jpg" class="logo" alt="logo" /> -->
       <h1>Site intranet de la section STS IG-SIO</h1>
     </div>
+    <?php
+    $user=$_SERVER['REMOTE_USER'];
+    $addr=$_SERVER['REMOTE_ADDR'];
+    echo $user;
+    ?>
 
 	<div id="menugauche">
 	  <ul id="menulist">
-       	 <li class="smenu"><a href="#" accesskey="c">Compétences IG</a>
+       	 <li class="smenu"><a href="#" accesskey="c">CompÃ©tences IG</a>
           <ul>
             <li>
-              <a href="?page=competencesSavoirsDA" title="Liste des compétences DA">Compétences DA</a>
+              <a href="?page=competencesSavoirsDA" title="Liste des compÃ©tences DA">CompÃ©tences DA</a>
             </li>
             <li>
-              <a href="?page=competencesSavoirsAR" title="Liste des compétences AR">Compétences AR</a>
+              <a href="?page=competencesSavoirsAR" title="Liste des compÃ©tences AR">CompÃ©tences AR</a>
             </li>
           </ul> 
          </li>
-       	 <li class="smenu"><a href="#" accesskey="a">Activités SIO</a>
+       	 <li class="smenu"><a href="#" accesskey="a">ActivitÃ©s SIO</a>
           <ul>
             <li>
-              <a href="?page=activitesP1" title="Liste des activités du processus P1">Activités P1</a>
+              <a href="?page=activitesP1" title="Liste des activitÃ©s du processus P1">ActivitÃ©s P1</a>
             </li>
             <li>
-              <a href="?page=activitesP2" title="Liste des activités du processus P2">Activités P2</a>
+              <a href="?page=activitesP2" title="Liste des activitÃ©s du processus P2">ActivitÃ©s P2</a>
             </li>
             <li>
-              <a href="?page=activitesP3" title="Liste des activités du processus P3">Activités P3</a>
+              <a href="?page=activitesP3" title="Liste des activitÃ©s du processus P3">ActivitÃ©s P3</a>
             </li>
             <li>
-              <a href="?page=activitesP4" title="Liste des activités du processus P4">Activités P4</a>
+              <a href="?page=activitesP4" title="Liste des activitÃ©s du processus P4">ActivitÃ©s P4</a>
             </li>
             <li>
-              <a href="?page=activitesP5" title="Liste des activités du processus P5">Activités P5</a>
+              <a href="?page=activitesP5" title="Liste des activitÃ©s du processus P5">ActivitÃ©s P5</a>
             </li>
           </ul> 
          </li>
@@ -50,7 +55,7 @@
               <a href="?page=listeOrganisations" title="Liste des organisations ayant accueilli un stagiaire">Liste entreprises</a>
             </li>
             <li>
-              <a href="?page=rechercheStagesCriteres" title="Rechercher un stage sur critères">Recherche stages</a>
+              <a href="?page=rechercheStagesCriteres" title="Rechercher un stage sur critÃ¨res">Recherche stages</a>
             </li>
           </ul> 
          </li>
@@ -59,16 +64,16 @@
        	 
        	
        	
-       	<li class="smenu"><a href="#" accesskey="c">Administration</a>
+       	<li class="smenu"><a href="./accueiladmin.php" accesskey="c">Administration</a>
           <ul>
-             <li class="smenu"><a href="?page=ajoutEtudiant" title="Ajout edutiant">Ajout etudiant</a>
+             <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout edutiant">Ajout etudiant</a>
        	 </li>
-            <li class="smenu"><a href="?page=ajoutPeriode" title="Ajout periode">Ajout periode</a>
+            <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout periode">Ajout periode</a>
             </li>
             <li class="smenu"><a href="?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>
             
-            <li class="smenu"><a href="./accueil.php" title="Accueil">Se deconecter</a>
+            <li class="smenu"><a href="../accueil.php" title="Accueil">Se déconnecter</a>
             </li>
           </ul>  
           
@@ -82,7 +87,7 @@
 		  
 	
 	 <div id="contenu">
-  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('./Appli-HistoStages-V1.0/'.$page.'.php');} ?>
+  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('../Appli-HistoStages-V1.0/'.$page.'.php');} ?>
 	 </div>
 	
   <!-- Division pour le pied de page -->
