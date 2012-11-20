@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+DirectoryIndex accueil.php
+AuthType Basic
+AuthName "Restricted Files"
+# (Following line optional)
+AuthUserFile C:\xampp\password
+Require user Admin

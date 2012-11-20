@@ -67,7 +67,7 @@
           <ul>
              <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout édutiant">Ajout etudiant</a>
        	 </li>
-            <li class="smenu"><a href="../?page=ajoutPeriode" title="Ajout période">Ajout periode</a>
+            <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout période">Ajout periode</a>
             </li>
             <li class="smenu"><a href="../?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>

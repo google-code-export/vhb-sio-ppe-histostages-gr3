@@ -12,6 +12,13 @@ function estUnCp($codePostal)
 
 // Si la valeur transmise ne contient pas d'autres caractères que des chiffres,
 // la fonction retourne vrai
+function estDate($valeur)
+{
+	return preg_match("[^(\d+|(\d{4})-(\d{2})-(\d{2})(.*))$]", $valeur);
+}
+
+// Si la valeur transmise ne contient pas d'autres caractères que des chiffres,
+// la fonction retourne vrai
 function estEntier($valeur)
 {
 	return !ereg("[^0-9]", $valeur);
@@ -99,7 +106,7 @@ function convFormatDate($dBigEndian)
 {
 	 
 	$libJour = array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
-	$libMois = array("Janvier", "F�vrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Ao�t", "Septembre", "Octobre", "Novembre", "Décembre");
+	$libMois = array("Janvier", "F�vrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Ao�t", "Septembre", "Octobre", "Novembre", "Décembre");
 	$timestamp = strtotime($dBigEndian);
 	$tab = getdate($timestamp);
 	$res = $libJour[$tab["wday"]] . " " . $tab["mday"] . " " . $libMois[$tab["mon"]] . " " . $tab["year"];
