@@ -100,7 +100,7 @@
 				<input type="submit" id="valider" value="Valider" />
 				</p>
 			</form>
-			
+			<p>SVP, uploader un fichier au format .CSV</p>
 
 
 
