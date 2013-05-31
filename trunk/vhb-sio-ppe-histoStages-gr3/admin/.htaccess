@@ -1,7 +1,7 @@
 AddDefaultCharset utf-8
-DirectoryIndex accueil.php
-AuthType Basic
+DirectoryIndex accueilAdmin.php
 AuthName "Restricted Files"
+AuthType Basic
 # (Following line optional)
-AuthUserFile C:\xampp\password
-Require user Admin
+AuthUserFile C:\xampp\htdocs\vhb-sio-ppe-histoStages-gr3\admin\.htpasswd
+Require valid-user

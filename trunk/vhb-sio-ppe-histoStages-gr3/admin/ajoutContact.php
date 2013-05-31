@@ -4,7 +4,7 @@
 <head>
 <title>Site intranet de la section STS IG-SIO</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="../styles.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -17,34 +17,47 @@
 		<ul id="menulist">
 			<li class="smenu"><a href="#" accesskey="c">Compétences IG</a>
 				<ul>
-					<li><a href="?page=competencesSavoirsDA"
+					<li><a href="../Appli-HistoStages-V1.0/competencesSavoirsDA.php"
 						title="Liste des compétences DA">Compétences DA</a></li>
-					<li><a href="?page=competencesSavoirsAR"
+					<li><a href="../Appli-HistoStages-V1.0/competencesSavoirsAR.php"
 						title="Liste des compétences AR">Compétences AR</a></li>
 				</ul></li>
 			<li class="smenu"><a href="#" accesskey="a">Activités SIO</a>
 				<ul>
-					<li><a href="?page=activitesP1"
+					<li><a href="../?page=activitesP1"
 						title="Liste des activités du processus P1">Activités P1</a></li>
-					<li><a href="?page=activitesP2"
+					<li><a href="../?page=activitesP2"
 						title="Liste des activités du processus P2">Activités P2</a></li>
-					<li><a href="?page=activitesP3"
+					<li><a href="../?page=activitesP3"
 						title="Liste des activités du processus P3">Activités P3</a></li>
-					<li><a href="?page=activitesP4"
+					<li><a href="../?page=activitesP4"
 						title="Liste des activités du processus P4">Activités P4</a></li>
-					<li><a href="?page=activitesP5"
+					<li><a href="../?page=activitesP5"
 						title="Liste des activités du processus P5">Activités P5</a></li>
 				</ul></li>
 			<li class="smenu"><a href="#" accesskey="h">Historique stages</a>
 				<ul>
-					<li><a href="?page=listeOrganisations"
+					<li><a href="../?page=listeOrganisations"
 						title="Liste des organisations ayant accueilli un stagiaire">Liste
 							entreprises</a></li>
-					<li><a href="?page=rechercheStagesCriteres"
+					<li><a href="../?page=rechercheStagesCriteres"
 						title="Rechercher un stage sur critères">Recherche stages</a></li>
 				</ul></li>
 			<li class="smenu"><a href="?page=adressesSites" accesskey="L">Liens
 					sites stages</a></li>
+					
+			<li class="smenu"><a href="#" accesskey="c">Administration</a>
+          <ul>
+             <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout �dutiant">Ajout etudiant</a>
+       	 </li>
+            <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout p�riode">Ajout periode</a>
+            </li>
+            <li class="smenu"><a href="../?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
+            </li>
+            
+            <li class="smenu"><a href="../accueil.php" title="Accueil">Se deconecter</a>
+            </li>
+          </ul>
 
 		</ul>
 	</div>

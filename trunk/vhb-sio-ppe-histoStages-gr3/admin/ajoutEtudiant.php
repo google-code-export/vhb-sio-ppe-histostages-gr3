@@ -63,13 +63,13 @@
        	 
        	
        	
-       	<li class="smenu"><a href="#" accesskey="c">Administration</a>
+       	<li class="smenu"><a href="./accueiladmin.php" accesskey="c">Administration</a>
           <ul>
              <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout édutiant">Ajout etudiant</a>
        	 </li>
             <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout période">Ajout periode</a>
             </li>
-            <li class="smenu"><a href="../?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
+            <li class="smenu"><a href="../Appli-HistoStages-V1.0/listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>
             
             <li class="smenu"><a href="../accueil.php" title="Accueil">Se deconecter</a>
@@ -83,11 +83,6 @@
         
   </ul>
  </div> 
-		  
-	
-	 <div id="contenu">
-  
-  
 
 	<div id="corpsForm">
 		<p>
@@ -107,6 +102,7 @@
 
 		</fieldset>
 		
+		</div> 
 		
 <?php
 

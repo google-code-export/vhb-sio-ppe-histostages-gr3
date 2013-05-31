@@ -52,7 +52,7 @@ class="tabQuadrille">
       $nbStages=$lg['nbStages'];
       echo '
 		<tr class="ligneTabQuad">
-         <td><a href="accueil.php?page=detailOrganisation&amp;numero='.$num.'">'.$nom.'</a></td>
+         <td><a href="http://localhost/vhb-sio-ppe-histoStages-gr3/accueil.php?page=detailOrganisation&numero='.$num.'">'.$nom.'</a></td>
          <td>'. $rue .' '. $cp . ' '. $ville . '</td>
          <td>'. $nbStages . '</td>
     </tr>';

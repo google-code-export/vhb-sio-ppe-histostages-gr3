@@ -15,7 +15,6 @@
     <?php
     $user=$_SERVER['REMOTE_USER'];
     $addr=$_SERVER['REMOTE_ADDR'];
-    echo $user;
     ?>
 
 	<div id="menugauche">
@@ -66,9 +65,9 @@
        	
        	<li class="smenu"><a href="./accueiladmin.php" accesskey="c">Administration</a>
           <ul>
-             <li class="smenu"><a href="./ajoutEtudiant.php" title="Ajout edutiant">Ajout etudiant</a>
+            <li class="smenu"><a href="ajoutEtudiant.php" title="Ajout edutiant">Ajout etudiant</a>
        	 </li>
-            <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout periode">Ajout periode</a>
+            <li class="smenu"><a href="ajoutPeriode.php" title="Ajout periode">Ajout periode</a>
             </li>
             <li class="smenu"><a href="?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>
@@ -87,7 +86,10 @@
 		  
 	
 	 <div id="contenu">
-  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('../Appli-HistoStages-V1.0/'.$page.'.php');} ?>
+  <?php if ( isset($_GET["page"]) ) { $page = $_GET["page"]; include('../Appli-HistoStages-V1.0/'.$page.'.php');} 
+	echo 'Bienvenue '.$user;
+  ?>
+	
 	 </div>
 	
   <!-- Division pour le pied de page -->
