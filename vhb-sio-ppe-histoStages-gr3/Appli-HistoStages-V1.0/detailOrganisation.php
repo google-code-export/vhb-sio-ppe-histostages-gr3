@@ -12,13 +12,13 @@ if (!$connexion)
 {
 	ajouterErreur($tabErreurs, "Echec de la connexion au serveur MySql");
 	afficherErreurs($tabErreurs);
-	exit();
+	
 }
 if (!selectBase($connexion))
 {
 	ajouterErreur($tabErreurs, "La base de données stsig est inexistante ou non accessible");
 	afficherErreurs($tabErreurs);
-	exit();
+	
 }
 
 if ( !isset($_GET['numero']) )
@@ -79,7 +79,7 @@ else
 	</tr>
 	</table>
 	<p class="liensFinPage">
-	<a href="ajouterContact.php"> Ajouter un contact </a> </br>
+	<a href="http://localhost/vhb-sio-ppe-histoStages-gr3/Admin/ajoutContact.php"> Ajouter un contact </a> </br>
 	<a href="accueil.php?page=listeOrganisations">Retour</a>
 	</p>';
 }

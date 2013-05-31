@@ -18,10 +18,10 @@
        	 <li class="smenu"><a href="#" accesskey="c">CompÃ©tences IG</a>
           <ul>
             <li>
-              <a href="../?page=competencesSavoirsDA" title="Liste des compÃ©tences DA">CompÃ©tences DA</a>
+              <a href="../Appli-HistoStages-V1.0/competencesSavoirsDA.php" title="Liste des compÃ©tences DA">CompÃ©tences DA</a>
             </li>
             <li>
-              <a href="../?page=competencesSavoirsAR" title="Liste des compÃ©tences AR">CompÃ©tences AR</a>
+              <a href="../Appli-HistoStages-V1.0/competencesSavoirsAR.php" title="Liste des compÃ©tences AR">CompÃ©tences AR</a>
             </li>
           </ul> 
          </li>
@@ -47,10 +47,10 @@
        	 <li class="smenu"><a href="#" accesskey="h">Historique stages</a>
           <ul >
             <li>
-              <a href="?page=listeOrganisations" title="Liste des organisations ayant accueilli un stagiaire">Liste entreprises</a>
+              <a href="../?page=listeOrganisations" title="Liste des organisations ayant accueilli un stagiaire">Liste entreprises</a>
             </li>
             <li>
-              <a href="?page=rechercheStagesCriteres" title="Rechercher un stage sur critÃ¨res">Recherche stages</a>
+              <a href="../?page=rechercheStagesCriteres" title="Rechercher un stage sur critÃ¨res">Recherche stages</a>
             </li>
           </ul> 
          </li>
@@ -62,7 +62,7 @@
        	 </li>
             <li class="smenu"><a href="./ajoutPeriode.php" title="Ajout periode">Ajout periode</a>
             </li>
-            <li class="smenu"><a href="?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
+            <li class="smenu"><a href="../?page=listeOrganisations" title="Ajout periode">Ajout Contact</a>
             </li>
             
             <li class="smenu"><a href="../accueil.php" title="Accueil">Se déconnecter</a>
